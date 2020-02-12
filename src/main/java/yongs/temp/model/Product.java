@@ -7,10 +7,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 @Scope(scopeName = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class Product {
-    String code;
-	String name;
-	String image;
-	String price;
+    private String code;
+    private String name;
+    private String image;
+    private long price;
 	
 	public String getCode() {
 		return code;
@@ -18,10 +18,10 @@ public class Product {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public String getPrice() {
+	public long getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(long price) {
 		this.price = price;
 	}
 	public String getName() {
